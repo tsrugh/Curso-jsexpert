@@ -1,0 +1,17 @@
+{
+  "name": "aula002-stubs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/service.test.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.1"
+  }
+}
