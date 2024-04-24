@@ -1,0 +1,18 @@
+{
+  "name": "aula003",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/fibonacci.test.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.1"
+  }
+}
