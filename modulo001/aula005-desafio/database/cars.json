@@ -1,0 +1,16 @@
+[
+    {
+        "id": "fde298da-bcd0-4e73-9001-078323ccf269",
+        "name": "Durango",
+        "releaseYear": 2023,
+        "avaliable": true,
+        "gasAvaliable": true
+    },
+    {
+        "id": "6723eb89-7e83-44af-a68d-588ccbda0695",
+        "name": "Camaro",
+        "releaseYear": 2024,
+        "avaliable": true,
+        "gasAvaliable": true
+    }
+]
