@@ -1,14 +1,39 @@
-const http = require('http')
+const http = require('http');
+const { Http2ServerRequest, Http2ServerResponse } = require('http2');
+
+const routes = {
+
+  '/:get': async (request, response) => {
+    response.write(JSON.stringify({
+
+      data: ''
+
+    }))
+
+    return response.end()
+  },
+
+  default: (request, response) => {
+
+    response.writeHead(404)
+    return response.end(JSON.stringify({message: 'Not Found!'}))
+
+  }
+
+}
 
 
-const server = http.createServer((req, res) => {
-    console.log(req.method)
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({
-        data: 'Hello World!',
-      }));
-})
+function handler(request, response) {
+
+  const { url, method } = request
+  const routeKey = `${url.toLowerCase()}:${method.toLowerCase()}`
+  const chosen = routes[routeKey] || routes.default
+  return chosen(request, response)
+
+}
 
 
+const app = http.createServer(handler)
+.listen(3000, () => console.log('running at 3000'))
 
-server.listen(3030)
+module.exports = app

@@ -10,6 +10,7 @@
     "seed": "node ./seed",
     "test": "npx mocha **/**/*.test.js",
     "test:dev": "npx mocha -w --parallel **/**/*.test.js",
+    "test:devApi": "npx mocha -w --parallel ./src/API/*.test.js",
     "test:cov": "npx nyc npx mocha --parallel **/**/*.test.js ",
     "start": "nodemon ./src/API/index.js"
   },
@@ -22,5 +23,9 @@
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "sinon": "^9.2.4"
+  },
+  "dependencies": {
+    "cl": "^0.0.1",
+    "supertest": "^6.3.4"
   }
 }
